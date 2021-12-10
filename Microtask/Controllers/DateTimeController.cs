@@ -13,15 +13,15 @@ namespace Microtask.Controllers
         public DateTime Date = DateTime.Now;
 
         [HttpGet("/date")]
-        public string GetDate(string formatDay = "dd", string formatMonth = "MM", string formatYear = "yy")
+        public string GetDate(string formatDate = "dd.MM.yy")
         {
-            return Date.ToString(string.Format("{0}.{1}.{2}", formatDay, formatMonth, formatYear));
+            return Date.ToString(formatDate);
         }
 
         [HttpGet("/time")]
-        public string GetTime(string formatHour = "hh", string formatMinute = "mm", string formatSecond = "ss")
+        public string GetTime(string formatTime = "dd:MM:ss")
         {
-            return Date.ToString(string.Format("{0}:{1}:{2}", formatHour, formatMinute, formatSecond));
+            return Date.ToString(formatTime);
         }
     }
 }
